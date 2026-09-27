@@ -1,5 +1,7 @@
 # Resume Screening & Job Recommendation API
 
+![Python](https://img.shields.io/badge/python-3.12-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688) ![Docker](https://img.shields.io/badge/docker-ready-2496ED) ![License: MIT](https://img.shields.io/badge/license-MIT-green)
+
 A backend API for a simplified automated resume screening and job
 recommendation system, built with **FastAPI**. Accepts candidate resume
 data, stores job listings, provides keyword-based job search, and
@@ -165,9 +167,30 @@ Response:
 
 ## Notes
 
-- No frontend is included, per the task scope.
+- No frontend is included; this is a backend-only API.
 - Data is in-memory and resets whenever the server restarts — swap
   `storage.py`'s `InMemoryStore` for a real database client to persist
   data, without needing to touch `services.py` or `routes.py`.
 - Uploaded attachments are simulated as text (filename + content string)
-  rather than real file uploads, per the task's simplification notes.
+  rather than real file uploads.
+
+## Roadmap / Ideas for Contributions
+
+- Persist data with a real database (e.g. PostgreSQL via SQLAlchemy)
+- Accept real PDF/DOCX uploads and extract skills automatically
+- Smarter matching (skill synonyms, weighting, semantic similarity)
+- Automated tests with `pytest` and a CI workflow
+
+## Contributing
+
+Contributions are welcome! Fork the repo, create a branch, make your
+changes, and open a pull request. For bigger changes, please open an
+issue first to discuss what you'd like to add.
+
+## Author
+
+Built by **Chigozirim Olebara** — [GitHub](https://github.com/Olebara1010)
+
+## License
+
+Released under the [MIT License](LICENSE).
